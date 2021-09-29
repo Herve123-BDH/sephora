@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Surprise for sephora</title>
+    
+</head>
+<body id="body">
+    <div style="display: flex; justify-content: center;"><h1 class="btn btn-outline-light">Surprise pour Sephora</h1></div>
+    <div>
+        <div class="sup">
+            <h3 id="click">Click the box to see your surprise</h3>
+            <img onclick="myfunc()" id="surprise" src="PngItem_3668111.png" alt="#">
+            <img id="second" src="/d5586dc04df058328219262cedc299ab-removebg-preview.png" alt="#"/>
+        </div>
+        <div id="first">
+            <h2 id="inside">Je lève les yeux au ciel, un nuage blanc passe. En le regardant, j'aperçois ton doux visage. Tu as toujours tes petites joues rosées, deux petites pommes d’amour dans lesquelles j’aimerais croquer.
+                A chaque fois que tu souris, je craque!
+            </h2>
+        </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    #body{
+        background-image: url('-LOVE-love-36983825-1680-1050.jpg');
+    }
+    #first{
+        display: none;
+        background: url('photo-1507525428034-b723cf961d3e.jfif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        border: 2px solid #ffff;
+        width: 80vw;
+        border-radius: 50px;
+        margin: 0 auto;
+        height: 500px;
+        padding: 30px;
+    }
+    h3{
+        color: rgb(4, 184, 255);
+        opacity: 1;
+    }
+    #second{
+        display: none;
+        width: 80vw;
+    }
+    #surprise{
+        width: 80vw;
+        cursor: pointer;
+    }
+    #click{
+        color: red;
+        animation-name: cool;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+    }
+    @keyframes cool {
+        from{opacity: 0.2; color: red;}
+        50%{opacity: 1; color: rgb(200, 255, 0);}
+        to{opacity: 0.2; color: red;}
+    }
+    .sup{
+        margin: 20vh 0 auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<script>
+var audio = new Audio("DADJU - Reine (Clip Officiel).mp3");
+audio.currentTime = 0;	// Set audio play time from the beginning of audio
+
+    function myfunc(){
+        audio.play();
+        document.getElementById('surprise').style='display: none';
+        document.getElementById('second').style='display: block;';
+        document.getElementById('click').style='display:none';
+        setTimeout(function(){ document.getElementById('second').style='display: none;'; document.getElementById('body').style='background-image:url(pp.jfif); background-repeat:repeat; background-size: 100vh'; }, 2000);
+        setTimeout(function(){ document.getElementById('first').style='display: block;'; }, 2100);
+        setTimeout(function(){ document.getElementById('inside').innerHTML=`J'ai regardé une fleur et j'ai pensé que c'était la plus belle chose que j'ai jamais vu jusqu'à ce que je t'ai rencontré.  Je viens simplement à ton oreille chuchoter des mots doux afin de te rappeler combien tu es importante pour moi.`; }, 20000);
+        setTimeout(function(){ document.getElementById('inside').innerHTML=` Je voudrais t'envoyer une fleur pour apporter un peu de bonheur et pour te rappeler que je pense très fort à toi. j'aurais temps aimé te rencontrer pour de vrai. Te rencontrer, partager quelques moment avec toi comme diner le soir, `; }, 40000);
+        setTimeout(function(){ document.getElementById('inside').innerHTML=`aller a la place, passer dans les parcs et manger quelques glasse, passer des soirées cinemants devant les films d'honneur comme tu les aimes bien, juste pour te dire que t'es une fille bien ravissante et j'aimerais te rencontrer un jour❤❤❤`; }, 60000);
+        setTimeout(function(){audio.pause()},67000)
+    }
+</script>
+</body>
+</html>
